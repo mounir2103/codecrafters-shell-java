@@ -17,7 +17,7 @@ public class Main {
                 if (builtin.contains(command.substring(5))) {
                     System.out.println(command.substring(5) + " is a shell builtin");
                 }else{
-                    System.out.println(command.substring(5) + " command not found");
+                    System.out.println(command.substring(5) + ": not found");
                 }
             }else{
                 System.out.println(command + ": command not found");

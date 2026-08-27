@@ -8,8 +8,10 @@ public class Main {
         while(true){
             System.out.print("$ ");
             String command = scanner.nextLine();
+            if(command.equals("exit")){
+                break;
+            }
             System.out.println(command + ": command not found");
-            System.out.println("exit");
         }
         
     }

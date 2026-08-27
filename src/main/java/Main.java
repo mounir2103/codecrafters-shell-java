@@ -10,12 +10,12 @@ public class Main {
             String command = scanner.nextLine();
             if(command.equals("exit")){
                 break;
-            }
-            if(command.startsWith("echo ")){
+            }else if(command.startsWith("echo ")){
                 System.out.println(command.substring(5));
-                break;
             }
-            System.out.println(command + ": command not found");
+            else{
+                System.out.println(command + ": command not found");
+            }
         }
         
     }

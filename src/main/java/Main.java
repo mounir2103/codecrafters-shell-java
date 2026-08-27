@@ -8,6 +8,6 @@ public class Main {
 
         String command = scanner.nextLine();
 
-        System.out.println(command + " : command not found");
+        System.out.println(command + ": command not found");
     }
 }

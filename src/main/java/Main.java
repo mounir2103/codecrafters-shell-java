@@ -36,6 +36,7 @@ public class Main {
                     for(String dir : dirs){
                         File file = new File(dir, cmd);
                         if(file.exists() && file.canExecute()){
+                            System.out.println(cmd + " is " + file.getPath());
                             found = true;
                             break;
                         }

@@ -32,7 +32,7 @@ public class Main {
                 if(file.exists() && file.isDirectory()){
                     currentDir = file.getAbsolutePath();
                 }else{
-                    System.out.println("cd: <"+path+ ">: No such file or directory");
+                    System.out.println("cd: "+path+ ": No such file or directory");
                 }
                 
             }

@@ -28,15 +28,14 @@ public class Main {
             
             else if(command.startsWith("cd ")){
                 String path = command.substring(3);
-                if (path.startsWith("/")) {
-                    File file = new File(path);
-                    if(file.exists() && file.isDirectory()){
-                        currentDir = file.getAbsolutePath();
-                        System.out.println(currentDir);
-                    }else{
-                        System.out.println("cd: <"+path+ ">: No such file or directory");
-                    }
+                File file = new File(path);
+                if(file.exists() && file.isDirectory()){
+                    currentDir = file.getAbsolutePath();
+                    System.out.println(currentDir);
+                }else{
+                    System.out.println("cd: <"+path+ ">: No such file or directory");
                 }
+                
             }
 
             else if(command.startsWith("type ")){

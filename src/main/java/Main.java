@@ -31,7 +31,6 @@ public class Main {
                 File file = new File(path);
                 if(file.exists() && file.isDirectory()){
                     currentDir = file.getAbsolutePath();
-                    System.out.println(currentDir);
                 }else{
                     System.out.println("cd: <"+path+ ">: No such file or directory");
                 }

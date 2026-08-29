@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         Scanner scanner = new Scanner(System.in);
-        List<String> builtin = Arrays.asList("exit", "echo", "type");
+        List<String> builtin = Arrays.asList("exit", "echo", "type", "pwd");
 
         while(true){
             System.out.print("$ ");
@@ -15,6 +15,9 @@ public class Main {
 
             if(command.equals("exit")){
                 break;
+            }
+            else if(command.equals("pwd")){
+                System.out.println(System.getProperty("user.dir"));
             }
 
             else if(command.startsWith("echo ")){

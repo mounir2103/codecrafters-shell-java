@@ -8,11 +8,12 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         List<String> builtin = Arrays.asList("exit", "echo", "type", "pwd", "cd");
+        String currentDir = System.getProperty("user.dir");
 
         while(true){
             System.out.print("$ ");
             String command = scanner.nextLine();
-            String currentDir = System.getProperty("user.dir");
+            
 
             if(command.equals("exit")){
                 break;
@@ -26,7 +27,7 @@ public class Main {
             }
             
             else if(command.startsWith("cd ")){
-                String path = command.substring(4);
+                String path = command.substring(3);
                 if (path.startsWith("/")) {
                     File file = new File(path);
                     if(file.exists() && file.isDirectory()){
